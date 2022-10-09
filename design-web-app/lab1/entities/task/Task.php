@@ -27,7 +27,6 @@ class Task implements ITask
         // TODO: Implement save() method.
         $user = $this->user->getUser($userId);
         $this->sender->sendEmail('Task ' . $taskName . ' was saved successfully', $user->email);
-        $this->changeStatus(ETaskStatus::Pending, new DateTime(), $userId);
     }
 
     public function changeStatus(ETaskStatus $taskStatus, DateTime $time, string $userId)

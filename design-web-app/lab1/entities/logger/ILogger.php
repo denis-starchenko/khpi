@@ -2,6 +2,7 @@
 
 namespace entities\logger;
 use entities\user\IUser;
+use DateTime;
 
 enum ELogLevel
 {
