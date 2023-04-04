@@ -4,9 +4,9 @@
 # Backup documents files.
 #
 ####################################
-backup_files="/home/denys/Downloads/*.xlsx"
+backup_files="/home/$USER/Downloads/*.xlsx"
 
-dest_path="/home/denys/studies/backup"
+dest_path="/home/$USER/studies/backup"
 
 # Create archive
 day=$(date +%a_%b_%y_%H_%M)
