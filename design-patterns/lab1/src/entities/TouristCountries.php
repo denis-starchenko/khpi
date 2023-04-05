@@ -13,7 +13,7 @@ class TouristCountries implements ICountryNumerable
 
     public function createNumerator(): ICountryIterator
     {
-        return new CountryNumerator($this);
+        return new TouristCountryNumerator($this);
     }
 
     public function count(): int

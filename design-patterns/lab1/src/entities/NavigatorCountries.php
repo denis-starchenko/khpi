@@ -13,7 +13,7 @@ class NavigatorCountries implements ICountryNumerable
 
     public function createNumerator(): ICountryIterator
     {
-        return new CountryNumerator($this);
+        return new NavigatorCountryNumerator($this);
     }
 
     public function count(): int

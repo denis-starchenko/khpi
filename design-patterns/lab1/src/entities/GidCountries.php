@@ -13,7 +13,7 @@ class GidCountries implements ICountryNumerable
 
     public function createNumerator(): ICountryIterator
     {
-        return new CountryNumerator($this);
+        return new GidCountryNumerator($this);
     }
 
     public function count(): int
