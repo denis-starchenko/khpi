@@ -2,7 +2,7 @@
 
 namespace entities;
 
-class CountryNumerator implements ICountryIterator
+class TouristCountryNumerator implements ICountryIterator
 {
     public ICountryNumerable $aggregate;
     public int $index;
@@ -19,6 +19,6 @@ class CountryNumerator implements ICountryIterator
 
     public function next(): Country
     {
-        return $this->aggregate->current();
+        return $this->aggregate->current($this->index);
     }
 }
