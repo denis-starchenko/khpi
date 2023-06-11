@@ -1,7 +1,9 @@
 <?php
 
-$postgreSQLBuilder = new PostgreSQLBuilder();
-$mySQLBuilder = new MySQLBuilder();
+function buildQuery(IBuilder $sqlBuilder): string
+{
+    return $sqlBuilder->select()->where()->limit()->getSQL();
+}
 
-$postgreSQL = $postgreSQLBuilder->select()->where()->limit()->getSQL();
-$mySQL = $mySQLBuilder->select()->where()->limit()->getSQL();
+$postgreSQL = buildQuery(new PostgreSQLBuilder());
+$mySQL = buildQuery(new MySQLBuilder());
